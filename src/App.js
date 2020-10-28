@@ -14,6 +14,11 @@ export default function App() {
   const [userAnswer, setUserAnswer] = useState(null);
   const [answerIsCorrect, setAnswerIsCorrect] = useState(false);
 
+  const getRandomNumber = (min, max) => {
+    let randomNum = Math.random() * (max - min) + min;
+    return Math.round(randomNum);
+  };
+
   return (
     <div className="App">
       <Logo />
