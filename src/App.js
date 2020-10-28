@@ -6,6 +6,7 @@ import Loader from "./components/Loader";
 import Logo from "./components/Logo";
 import Sum from "./components/Sum";
 import AnswerForm from "./components/AnswerForm";
+import Feedback from "./components/Feedback";
 
 //React utils
 import React, { useState, useEffect } from "react";
@@ -53,6 +54,13 @@ export default function App() {
           <Logo />
           <Sum a={a} b={b} />
           <AnswerForm setUserAnswer={setUserAnswer} />
+          {userAnswer != null && answerIsCorrect ? (
+            <Feedback positive={true} />
+          ) : userAnswer != null && !answerIsCorrect ? (
+            <Feedback positive={false} />
+          ) : (
+            ""
+          )}
         </div>
       )}
     </>
