@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+//Styles
+import "./tailwind.output.css";
 
-function App() {
+//Components
+import Logo from "./components/Logo";
+
+//React utils
+import React, { useState, useEffect } from "react";
+
+export default function App() {
+  const [a, setA] = useState(null);
+  const [b, setB] = useState(null);
+  const [correctAnswer, setCorrectAnswer] = useState(null);
+  const [userAnswer, setUserAnswer] = useState(null);
+  const [answerIsCorrect, setAnswerIsCorrect] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo />
     </div>
   );
 }
-
-export default App;
