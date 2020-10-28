@@ -30,6 +30,15 @@ export default function App() {
     }, 3000);
   }, []);
 
+  const checkAnswer = () => {
+    correctAnswer == userAnswer
+      ? setAnswerIsCorrect(true)
+      : setAnswerIsCorrect(false);
+  };
+  useEffect(() => {
+    userAnswer != null && checkAnswer();
+  }, [userAnswer]);
+
   const getRandomNumber = (min, max) => {
     let randomNum = Math.random() * (max - min) + min;
     return Math.round(randomNum);
