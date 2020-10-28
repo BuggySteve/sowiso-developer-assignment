@@ -14,13 +14,20 @@ export default function App() {
   const [userAnswer, setUserAnswer] = useState(null);
   const [answerIsCorrect, setAnswerIsCorrect] = useState(false);
 
+  useEffect(() => {
+    //Create sum on app init
+    setA(getRandomNumber(1, 1000));
+    setB(getRandomNumber(1, 1000));
+    setCorrectAnswer(a + b);
+  }, []);
+
   const getRandomNumber = (min, max) => {
     let randomNum = Math.random() * (max - min) + min;
     return Math.round(randomNum);
   };
 
   return (
-    <div className="App">
+    <div>
       <Logo />
     </div>
   );
