@@ -2,6 +2,7 @@
 import "./tailwind.output.css";
 
 //Components
+import Loader from "./components/Loader";
 import Logo from "./components/Logo";
 import Sum from "./components/Sum";
 
@@ -9,6 +10,7 @@ import Sum from "./components/Sum";
 import React, { useState, useEffect } from "react";
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [a, setA] = useState(null);
   const [b, setB] = useState(null);
   const [correctAnswer, setCorrectAnswer] = useState(null);
@@ -20,6 +22,9 @@ export default function App() {
     setA(getRandomNumber(1, 1000));
     setB(getRandomNumber(1, 1000));
     setCorrectAnswer(a + b);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   }, []);
 
   const getRandomNumber = (min, max) => {
@@ -28,9 +33,15 @@ export default function App() {
   };
 
   return (
-    <div>
-      <Logo />
-      <Sum a={a} b={b} />
-    </div>
+    <>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div>
+          <Logo />
+          <Sum a={a} b={b} />
+        </div>
+      )}
+    </>
   );
 }
