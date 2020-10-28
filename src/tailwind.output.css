@@ -22759,28 +22759,28 @@ video {
   }
 }
 
-@-webkit-keyframes bounce-and-ping {
-  0%, 50% {
+@-webkit-keyframes bounce-and-stop {
+  0%, 100% {
     transform: translateY(-25%);
     -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
             animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 
-  25%, 100% {
+  25% {
     transform: translateY(0);
     -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
             animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
-@keyframes bounce-and-ping {
-  0%, 50% {
+@keyframes bounce-and-stop {
+  0%, 100% {
     transform: translateY(-25%);
     -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
             animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 
-  25%, 100% {
+  25% {
     transform: translateY(0);
     -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
             animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -22812,7 +22812,7 @@ video {
           animation: bounce 1s infinite;
 }
 
-.animate-bounce-and-ping {
+.animate-bounce-and-stop {
   -webkit-animation: bounce-and-ping 3s ease-in-out;
           animation: bounce-and-ping 3s ease-in-out;
 }
@@ -44946,7 +44946,7 @@ video {
             animation: bounce 1s infinite;
   }
 
-  .sm\:animate-bounce-and-ping {
+  .sm\:animate-bounce-and-stop {
     -webkit-animation: bounce-and-ping 3s ease-in-out;
             animation: bounce-and-ping 3s ease-in-out;
   }
@@ -67081,7 +67081,7 @@ video {
             animation: bounce 1s infinite;
   }
 
-  .md\:animate-bounce-and-ping {
+  .md\:animate-bounce-and-stop {
     -webkit-animation: bounce-and-ping 3s ease-in-out;
             animation: bounce-and-ping 3s ease-in-out;
   }
@@ -89216,7 +89216,7 @@ video {
             animation: bounce 1s infinite;
   }
 
-  .lg\:animate-bounce-and-ping {
+  .lg\:animate-bounce-and-stop {
     -webkit-animation: bounce-and-ping 3s ease-in-out;
             animation: bounce-and-ping 3s ease-in-out;
   }
@@ -111351,7 +111351,7 @@ video {
             animation: bounce 1s infinite;
   }
 
-  .xl\:animate-bounce-and-ping {
+  .xl\:animate-bounce-and-stop {
     -webkit-animation: bounce-and-ping 3s ease-in-out;
             animation: bounce-and-ping 3s ease-in-out;
   }

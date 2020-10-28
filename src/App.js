@@ -3,6 +3,7 @@ import "./tailwind.output.css";
 
 //Components
 import Logo from "./components/Logo";
+import Sum from "./components/Sum";
 
 //React utils
 import React, { useState, useEffect } from "react";
@@ -29,6 +30,7 @@ export default function App() {
   return (
     <div>
       <Logo />
+      <Sum a={a} b={b} />
     </div>
   );
 }
