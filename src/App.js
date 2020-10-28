@@ -5,6 +5,7 @@ import "./tailwind.output.css";
 import Loader from "./components/Loader";
 import Logo from "./components/Logo";
 import Sum from "./components/Sum";
+import AnswerForm from "./components/AnswerForm";
 
 //React utils
 import React, { useState, useEffect } from "react";
@@ -19,8 +20,10 @@ export default function App() {
 
   useEffect(() => {
     //Create sum on app init
-    setA(getRandomNumber(1, 1000));
-    setB(getRandomNumber(1, 1000));
+    let a = getRandomNumber(1, 1000);
+    let b = getRandomNumber(1, 1000);
+    setA(a);
+    setB(b);
     setCorrectAnswer(a + b);
     setTimeout(() => {
       setIsLoading(false);
@@ -40,6 +43,7 @@ export default function App() {
         <div>
           <Logo />
           <Sum a={a} b={b} />
+          <AnswerForm setUserAnswer={setUserAnswer} />
         </div>
       )}
     </>
