@@ -6,6 +6,7 @@ export default function Sum({ setUserAnswer }) {
   const [hasError, setHasError] = useState(false);
 
   const handleAnswerClick = () => {
+    setUserAnswer(null);
     setHasError(false);
     answer === ""
       ? setHasError(true)
