@@ -11,6 +11,9 @@ import Feedback from "./components/Feedback";
 //React utils
 import React, { useState, useEffect } from "react";
 
+//Third party
+import Slide from "react-reveal/Slide";
+
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [a, setA] = useState(null);
@@ -50,7 +53,7 @@ export default function App() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div>
+        <Slide top>
           <Logo />
           <Sum a={a} b={b} />
           <AnswerForm setUserAnswer={setUserAnswer} />
@@ -61,7 +64,7 @@ export default function App() {
           ) : (
             ""
           )}
-        </div>
+        </Slide>
       )}
     </>
   );

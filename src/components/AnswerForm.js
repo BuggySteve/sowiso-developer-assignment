@@ -1,6 +1,9 @@
 //React utils
 import React, { useState } from "react";
 
+//Third party
+import Fade from "react-reveal/Fade";
+
 export default function Sum({ setUserAnswer }) {
   const [answer, setAnswer] = useState(null);
   const [hasError, setHasError] = useState(false);
@@ -30,12 +33,14 @@ export default function Sum({ setUserAnswer }) {
       </div>
       <button
         onClick={() => handleAnswerClick()}
-        className="mt-6 w-full bg-blue-600 hover:bg-blue-700 focus:bg-indigo-500 focus:outline-none text-white rounded-br-xl rounded-tl-xl h-24 text-6xl "
+        className="mt-6 w-full bg-blue-600 hover:bg-blue-700 focus:outline-none text-white rounded-br-xl rounded-tl-xl h-24 text-6xl "
       >
         Yes!
       </button>
       {hasError ? (
-        <span className="text-red-500 text-4xl">Numbers only please!</span>
+        <Fade>
+          <span className="text-red-500 text-4xl">Numbers only please!</span>
+        </Fade>
       ) : (
         " "
       )}
