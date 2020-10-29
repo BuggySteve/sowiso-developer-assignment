@@ -35,7 +35,7 @@ export default function Sum({ setUserAnswer }) {
         onClick={() => handleAnswerClick()}
         className="mt-6 w-full bg-blue-600 hover:bg-blue-700 focus:outline-none text-white rounded-br-xl rounded-tl-xl h-24 text-6xl "
       >
-        Yes!
+        Go!
       </button>
       {hasError ? (
         <Fade>
